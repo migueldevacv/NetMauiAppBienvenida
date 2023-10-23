@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:models="clr-namespace:AppBienvenida.Models"
+             x:Class="AppBienvenida.MainPage"
+             Shell.NavBarIsVisible="False"
+             >
+
+
+    <Grid x:Name="Mp">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="12*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <FlexLayout
+            Grid.Row="0"
+            Grid.ColumnSpan="3"
+            >
+            <FlexLayout
+                x:Name="p1"
+                FlexLayout.Grow="1" 
+                JustifyContent="Center"
+                IsVisible="false"
+                >
+                <Label
+                    FlexLayout.Grow="1"
+                    FontSize="50"
+                    VerticalTextAlignment="Center"
+                    HorizontalTextAlignment="Center"
+                    Text="Hola bienvenido seas extraño"
+                    />
+            </FlexLayout>
+            <FlexLayout
+                x:Name="p2"
+                FlexLayout.Grow="1" 
+                JustifyContent="Center"
+                IsVisible="false"
+                >
+                <WebView Source="https://www.utt.edu.mx/"/>
+            </FlexLayout>
+
+            <FlexLayout
+                FlexLayout.Grow="1" 
+                x:Name="p3"
+                JustifyContent="Center"
+                IsVisible="false"
+                >
+                <Label
+                    FlexLayout.Grow="1"
+                    FontSize="60"
+                    VerticalTextAlignment="Center"
+                    HorizontalTextAlignment="Center"
+                    Text="Miguel Angel Castro Vaquera  19170023"
+                    />
+            </FlexLayout>
+        </FlexLayout>
+
+        <Button
+            x:Name="BtnMain"
+            Grid.Row="1"
+            Grid.Column="0"
+            CornerRadius="0"
+            Text="{x:Static models:IconFont.Home}"
+            Style="{x:StaticResource MatBtn}"
+            Clicked="manageScreenContent"
+            />
+        <Button
+            x:Name="BtnWeb"
+            Grid.Row="1"
+            Grid.Column="1"           
+            CornerRadius="0"
+            Text="{x:Static models:IconFont.School}"
+            Style="{x:StaticResource MatBtn}"
+            Clicked="manageScreenContent"
+            
+            />
+        <Button
+            x:Name="BtnProfile"
+            Grid.Row="1"
+            Grid.Column="2"
+            CornerRadius="0"
+            Text="{x:Static models:IconFont.Person}"
+            Style="{x:StaticResource MatBtn}"
+            Clicked="manageScreenContent"
+            />
+
+    </Grid>
+
+</ContentPage>
