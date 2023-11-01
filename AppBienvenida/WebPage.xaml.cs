@@ -6,9 +6,9 @@ using System.Diagnostics;
 
 namespace AppBienvenida
 {
-    public partial class MainPage : ContentPage
+    public partial class WebPage : ContentPage
     {
-        public MainPage()
+        public WebPage()
         {
             InitializeComponent();
         }

@@ -2,17 +2,12 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:models="clr-namespace:AppBienvenida.Models"
-             x:Class="AppBienvenida.MainPage"
+             x:Class="AppBienvenida.WebPage"
              Shell.NavBarIsVisible="False"
              >
-    <FlexLayout x:Name="p1">
-        <Label
-            FlexLayout.Grow="1"
-            FontSize="50"
-            VerticalTextAlignment="Center"
-            HorizontalTextAlignment="Center"
-            Text="Hola bienvenido seas extraño"
-            />
+
+    <FlexLayout>
+        <WebView Source="https://www.utt.edu.mx/"/>
     </FlexLayout>
 
 </ContentPage>
